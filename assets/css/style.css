@@ -129,6 +129,18 @@ button { font: inherit; }
 .menu-item dd { margin: 0; white-space: nowrap; }
 .menu-item dd strong { font-family: var(--heading); font-size: 1.6rem; }
 .menu-item dd span { margin-left: 3px; font-size: .85rem; }
+.menu-groups { display: grid; grid-template-columns: minmax(0, 1fr); gap: 38px; margin-top: 32px; }
+.menu-group { min-width: 0; }
+.menu-group-heading { display: flex; align-items: baseline; gap: 12px; margin-bottom: 7px; }
+.menu-group-heading span { color: var(--pink-deep); font-size: .6rem; font-weight: 700; letter-spacing: .15em; }
+.menu-group-heading h4 { margin: 0; font-family: var(--heading); font-size: 1rem; letter-spacing: .05em; }
+.menu-group .menu-item { min-width: 0; padding-block: 14px; }
+.menu-group .menu-item dt { min-width: 0; line-height: 1.55; }
+.menu-group .menu-item dd { flex-shrink: 0; }
+.menu-group-bottle .menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 26px; }
+.menu-group-bottle .menu-item-wide { grid-column: 1 / -1; }
+.menu-group-drink .menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 26px; }
+.menu-name-long { word-break: keep-all; }
 
 .section-mama { overflow: hidden; color: var(--white); background: var(--brown); }
 .section-mama::before { content: "MAMA"; position: absolute; left: -15px; bottom: -70px; color: rgba(255,255,255,.035); font-family: var(--heading); font-size: clamp(9rem, 20vw, 18rem); font-weight: 900; line-height: 1; }
@@ -285,6 +297,10 @@ button { font: inherit; }
   .menu-block { margin-top: 32px; padding-inline: 3px; }
   .menu-item dt { display: block; }
   .menu-category { display: block; margin-bottom: 2px; }
+  .menu-groups { grid-template-columns: 1fr; gap: 28px; margin-top: 26px; }
+  .menu-group-bottle .menu-list { display: block; }
+  .menu-group-drink .menu-list { display: block; }
+  .menu-group .menu-item { padding-block: 13px; }
   .section-mama { padding-block: 64px; }
   .mama-layout { grid-template-columns: 1fr; gap: 26px; }
   .mama-quote { grid-row: auto; padding: 24px 8px; }
